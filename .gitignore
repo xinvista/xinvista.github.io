@@ -5,3 +5,6 @@ resources/_dev/
 .hugo_build.lock
 .DS_Store
 Thumbs.db
+
+# 本地写作规范，不提交、不发布
+/WRITING.md
