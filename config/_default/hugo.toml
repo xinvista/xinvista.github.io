@@ -73,6 +73,11 @@ buildFuture = false
   name = "github"
   url = "https://github.com/xinvista"
 
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:1131603693@qq.com"
+  title = "邮箱"
+
 [[menu.main]]
   name = "首页"
   url = "/"
