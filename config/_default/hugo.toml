@@ -67,8 +67,6 @@ buildFuture = false
     Title = "记录，然后理解"
     Content = """
 计算机科学在读，方向偏 AI 与机器人。这里放我的学习记录、项目复盘，还有一些还没想清楚的想法。
-
-[CS](/tags/cs/) · [AI & Robotics](/tags/ai-robotics/) · [Projects](/tags/projects/) · [Thoughts](/tags/thoughts/)
 """
 
 [[params.socialIcons]]

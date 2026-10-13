@@ -18,10 +18,9 @@ themes/PaperMod/         主题（git submodule，不要直接改）
 
 ## 本地预览
 
-需要 Hugo Extended（已安装在 `E:\tools\hugo`）。
+需要 Hugo Extended（`hugo version` 能打印出版本号即可）。在项目目录下执行：
 
 ```powershell
-cd E:\my-blog
 hugo server
 ```
 
@@ -29,11 +28,7 @@ hugo server
 
 注意：本地预览请用 `hugo server`，不要用 `hugo server --environment production`。前者会读取 `config/development/`，把 favicon 这类绝对地址指向本地；后者会指向线上域名，图标会加载不出来。
 
-如果提示找不到 `hugo` 命令，说明当前终端还没读到新的 PATH，重开一个终端，或者直接用完整路径：
-
-```powershell
-E:\tools\hugo\hugo.exe server
-```
+如果提示找不到 `hugo` 命令，说明当前终端还没读到新的 PATH，重开一个终端再试。
 
 ## 写一篇新文章
 
