@@ -1,0 +1,43 @@
+/*
+ * XinVista — 设计变量
+ * 只覆盖 PaperMod 的 CSS 变量，不修改主题源码。
+ */
+
+:root {
+    --main-width: 740px;
+
+    --theme: #F6F4EE;
+    --entry: #FFFFFF;
+    --primary: #202B3C;
+    --content: #202B3C;
+    --secondary: #65788B;
+    --tertiary: #E5E1D8;
+    --border: #E5E1D8;
+    --code-bg: #EFEBE2;
+    --code-block-bg: #202B3C;
+
+    --accent: #D97745;
+    --accent-soft: rgba(217, 119, 69, 0.14);
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --theme: #171C24;
+    --entry: #202733;
+    --primary: #E5E9EF;
+    --content: #E5E9EF;
+    --secondary: #A0ADBD;
+    --tertiary: #2A3140;
+    --border: #262E3B;
+    --code-bg: #202733;
+    --code-block-bg: #12161D;
+
+    --accent: #E7976B;
+    --accent-soft: rgba(231, 151, 107, 0.16);
+    color-scheme: dark;
+}
+
+/* 列表页与正文保持同一个底色 */
+.list {
+    background: var(--theme);
+}

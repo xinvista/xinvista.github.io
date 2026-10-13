@@ -1,0 +1,117 @@
+/*
+ * XinVista — 字体
+ * 拉丁字形自托管（Roboto 正文 / JetBrains Mono 等宽），中文交给系统字体。
+ */
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/roboto-latin-400-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/roboto-latin-500-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/roboto-latin-700-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 可变字重，一个文件覆盖 100–800 */
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url("/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+    --font-sans: "Roboto", system-ui, -apple-system, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+        "PingFang SC", "Microsoft YaHei", "Noto Sans SC", monospace;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+/* 等宽承担：标题、导航、元信息、代码 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.entry-header,
+.entry-footer,
+.post-meta,
+.breadcrumbs,
+nav,
+.logo a,
+code,
+kbd,
+pre,
+samp {
+    font-family: var(--font-mono);
+}
+
+/* 正文：中文优先可读性 */
+.md-content {
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+}
+
+.post-meta,
+.breadcrumbs {
+    letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 480px) {
+    .md-content {
+        font-size: 16px;
+    }
+
+    .post-title {
+        font-size: 28px;
+    }
+
+    .md-content h1 {
+        font-size: 30px;
+    }
+
+    .md-content h2 {
+        font-size: 24px;
+    }
+
+    .md-content h3 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,6 @@
+# 本地预览专用配置，会覆盖 config/_default 里的同名项。
+# 作用：让模板里的绝对地址指向本地，否则 favicon 等资源会去线上域名请求。
+baseURL = "http://localhost:1313/"
+
+# 让开发服务器的输出写到别处，避免把 public/ 里给线上用的构建产物覆盖成本地地址。
+publishDir = "resources/_dev"

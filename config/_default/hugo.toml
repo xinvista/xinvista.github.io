@@ -1,0 +1,101 @@
+baseURL = "https://xinvista.github.io/"
+locale = "zh-CN"
+defaultContentLanguage = "zh"
+title = "XinVista"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+enableEmoji = true
+hasCJKLanguage = true
+buildDrafts = false
+buildFuture = false
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[params]
+  env = "production"
+  description = "XinVista —— 记录计算机科学、AI 与机器人、学习笔记与项目实践。"
+  author = "XinVista"
+  keywords = ["计算机科学", "人工智能", "机器人", "学习笔记"]
+  DateFormat = "2006-01-02"
+  defaultTheme = "auto"
+  mainSections = ["posts"]
+
+  ShowReadingTime = true
+  ShowWordCount = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  ShowToc = true
+  TocOpen = false
+  hidemeta = false
+  hideSummary = false
+  disableSpecial1stPost = true
+  disableScrollToTop = false
+
+  [params.assets]
+    theme_color = "#F6F4EE"
+
+  [params.fuseOpts]
+    iscasesensitive = false
+    shouldsort = true
+    ignorelocation = true
+    threshold = 0.3
+    distance = 1000
+    minmatchcharlength = 1
+    keys = ["title", "permalink", "summary", "content"]
+
+  [params.homeInfoParams]
+    Title = "记录，然后理解"
+    Content = """
+计算机科学在读，方向偏 AI 与机器人。这里放我的学习记录、项目复盘，还有一些还没想清楚的想法。
+
+[CS](/tags/cs/) · [AI & Robotics](/tags/ai-robotics/) · [Projects](/tags/projects/) · [Thoughts](/tags/thoughts/)
+"""
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/xinvista"
+
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "文章"
+  pageRef = "/posts"
+  weight = 2
+
+[[menu.main]]
+  name = "归档"
+  pageRef = "/archives"
+  weight = 3
+
+[[menu.main]]
+  name = "标签"
+  pageRef = "/tags"
+  weight = 4
+
+[[menu.main]]
+  name = "关于"
+  pageRef = "/about"
+  weight = 5

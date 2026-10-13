@@ -1,0 +1,66 @@
+/*
+ * XinVista — 细节修饰
+ * 克制使用强调色：链接下划线、引用条、选区、焦点环。
+ */
+
+.md-content a:not(.anchor) {
+    color: var(--primary);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 1.5px;
+}
+
+.md-content a:not(.anchor):hover {
+    color: var(--accent);
+}
+
+.md-content blockquote {
+    border-inline-start: 3px solid var(--accent);
+    color: var(--secondary);
+    font-style: normal;
+    padding-inline-start: 1.1rem;
+}
+
+.post-meta a:hover,
+.breadcrumbs a:hover,
+a[href*="/tags/"]:hover {
+    color: var(--accent);
+}
+
+::selection {
+    background: var(--accent-soft);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* 代码块：横向滚动而不是硬折行，长公式同理 */
+.md-content pre code {
+    word-break: normal;
+    overflow-wrap: normal;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.post-content code {
+    font-size: 0.86em;
+}
+
+.md-content .highlight,
+.md-content pre,
+.md-content table,
+.md-content .katex-display {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* 目录：跟随强调色 */
+details.toc summary {
+    color: var(--secondary);
+}
+
+details.toc summary:hover {
+    color: var(--accent);
+}
