@@ -64,9 +64,9 @@ buildFuture = false
     keys = ["title", "permalink", "summary", "content"]
 
   [params.homeInfoParams]
-    Title = "记录，然后理解"
+    Title = "给世界加一行注释"
     Content = """
-计算机科学在读，方向偏 AI 与机器人。这里放我的学习记录、项目复盘，还有一些还没想清楚的想法。
+研究机器如何理解世界，也留下我对世界的非标准解释。
 """
 
 [[params.socialIcons]]
